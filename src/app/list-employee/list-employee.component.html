@@ -1,0 +1,25 @@
+<table>
+  <thead>
+    <tr>
+      <th>Avatar</th>
+      <th>Name</th>
+      <th>ID</th>
+      <th>Position</th>
+      <th>Department</th>
+      <th>Email</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let el of emloyee"
+          routerLink="/detail/{{el.id}}">
+      <td>
+        <img [src]="el.avatar" alt="">
+      </td>
+      <th>{{el.name}}</th>
+      <td>{{el.id}}</td>
+      <td>{{el.position}}</td>
+      <td>{{el.department}}</td>
+      <td>{{el.email}}</td>
+    </tr>
+  </tbody>
+</table>

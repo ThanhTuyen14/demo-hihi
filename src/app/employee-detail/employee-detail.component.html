@@ -1,0 +1,7 @@
+<div *ngIf="item">
+  <div class="avatar">
+    <img [src]="item.avatar" alt="">
+  </div>
+  {{item.name}}
+  <button (click)="goBack()">go back</button>
+</div>
