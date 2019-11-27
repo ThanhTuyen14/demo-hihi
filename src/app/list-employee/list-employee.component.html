@@ -1,25 +1,36 @@
-<table>
-  <thead>
-    <tr>
-      <th>Avatar</th>
-      <th>Name</th>
-      <th>ID</th>
-      <th>Position</th>
-      <th>Department</th>
-      <th>Email</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr *ngFor="let el of emloyee"
-          routerLink="/detail/{{el.id}}">
-      <td>
-        <img [src]="el.avatar" alt="">
-      </td>
-      <th>{{el.name}}</th>
-      <td>{{el.id}}</td>
-      <td>{{el.position}}</td>
-      <td>{{el.department}}</td>
-      <td>{{el.email}}</td>
-    </tr>
-  </tbody>
-</table>
+
+<div class="row">
+    <div class="col-3">
+      <app-sub-nav></app-sub-nav>
+    </div>
+    <div class="col-9">
+        <table>
+        <thead>
+            <tr>
+              <th>Avatar</th>
+              <th>Name</th>
+              <th>ID</th>
+              <th>Position</th>
+              <th>Department</th>
+              <th>Email</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let el of emloyee"
+                  routerLink="/detail/{{el.id}}">
+              <td>
+                <img [src]="el.avatar" alt="">
+              </td>
+              <th>{{el.name}}</th>
+              <td>{{el.id}}</td>
+              <td>{{el.position}}</td>
+              <td>{{el.department}}</td>
+              <td>{{el.email}}</td>
+            </tr>
+          </tbody>
+        </table>
+    </div>
+  </div>
+  <app-nav-filter></app-nav-filter>
+
+
